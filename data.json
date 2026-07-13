@@ -1,0 +1,71 @@
+{
+
+"personal":{
+
+"name":"Nathaniel Gacayan",
+
+"role":"Future IT Professional",
+
+"tagline":"Building creative and responsive web applications.",
+
+"about":"I am an Information Technology student interested in web development, programming, and technology. I enjoy creating websites and learning new skills."
+
+},
+
+
+
+"skills":[
+
+
+{
+"name":"HTML"
+},
+
+{
+"name":"CSS"
+},
+
+{
+"name":"JavaScript"
+},
+
+{
+"name":"Java"
+}],
+
+
+
+
+"projects":[
+
+
+{
+
+"title":"Personal Portfolio Website",
+
+"description":"A responsive portfolio website created using HTML, CSS, and JavaScript.",
+
+"link":"Web Development"
+
+}],
+
+
+
+
+"education":[
+
+{
+"year":"2026",
+"school":"Lorma Colleges",
+"title":"College - Bachelor of Science in Information Technology",
+"description":"Studying programming, web development."
+},
+
+{
+"year":"2023 - 2025",
+"school":"Bacnotan National High School",
+"title":"Senior High School - Information Communication & Technology",
+"description":"Completed senior high school education."
+}
+
+]}
