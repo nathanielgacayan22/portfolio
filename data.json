@@ -36,18 +36,25 @@
 
 
 
-"projects":[
+"projects": [
+  {
+    "title": "Personal Portfolio Website",
+    "description": "A responsive portfolio website created using HTML, CSS, and JavaScript. It showcases my profile, skills, education, and projects using data loaded from a JSON file.",
+    "link": "Web Development 1"
+  },
+  {
+    "title": "Online Shopping Website",
+    "description": "A responsive online shopping website that displays products, allows users to browse different categories, and provides a simple shopping cart interface using HTML, CSS, and JavaScript.",
+    "link": "Web Development Project"
+  },
+  {
+    "title": "Restaurant Menu Website",
+    "description": "A responsive restaurant menu website that showcases food and beverage items with prices, categories, and an attractive layout built using HTML, CSS, and JavaScript.",
+    "link": "Web Development Project"
+  }
+],
 
 
-{
-
-"title":"Personal Portfolio Website",
-
-"description":"A responsive portfolio website created using HTML, CSS, and JavaScript.",
-
-"link":"Web Development"
-
-}],
 
 
 

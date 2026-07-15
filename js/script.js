@@ -1,165 +1,101 @@
-
 fetch("data.json")
 
-.then(response => response.json())
+    .then(response => response.json())
 
-.then(data => {
+    .then(data => {
 
+        document.getElementById("name").textContent =
+            data.personal.name;
 
+        document.getElementById("role").textContent =
+            data.personal.role;
 
-document.getElementById("name").textContent =
-data.personal.name;
+        document.getElementById("tagline").textContent =
+            data.personal.tagline;
 
+        document.getElementById("aboutText").textContent =
+            data.personal.about;
 
-document.getElementById("role").textContent =
-data.personal.role;
 
+        let skills = "";
 
-document.getElementById("tagline").textContent =
-data.personal.tagline;
+        data.skills.forEach(skill => {
 
+            skills += `
+        <div class="card">
+            <h3>${skill.name}</h3>
+        </div>
+        `;
 
-document.getElementById("aboutText").textContent =
-data.personal.about;
+        });
 
+        document.getElementById("skillsBox").innerHTML = skills;
 
 
+        let projects = "";
 
+        data.projects.forEach(project => {
 
-let skills = "";
+            projects += `
+        <div class="card">
 
-data.skills.forEach(skill => {
+            <img src="${project.image}" alt="${project.title}">
 
-    skills += `
+            <h3>${project.title}</h3>
 
-    <div class="card">
+            <p>${project.description}</p>
 
-        <h3>${skill.name}</h3>
+            <span>${project.link}</span>
 
-    </div>
+        </div>
+        `;
 
-    `;
+        });
 
-});
+        document.getElementById("projectsBox").innerHTML = projects;
 
 
-document.getElementById("skillsBox").innerHTML = skills;
 
+        let education = "";
 
-document.getElementById("skillsBox").innerHTML=skills;
+        data.education.forEach(item => {
 
+            education += `
+        <div class="timeline">
 
+            <h3>${item.year}</h3>
 
+            <h4>${item.school}</h4>
 
+            <h5>${item.title}</h5>
 
+            <p>${item.description}</p>
 
+        </div>
+        `;
 
-let projects="";
+        });
 
+        document.getElementById("educationBox").innerHTML = education;
 
-data.projects.forEach(project=>{
 
+    })
 
-projects += `
+    .catch(error => {
 
+        console.log(error);
 
-<div class="card">
+    });
 
 
-<h3>
-${project.title}
-</h3>
 
+const menu = document.getElementById("menu");
 
-<p>
-${project.description}
-</p>
+const nav = document.getElementById("nav");
 
 
-<span>
-${project.link}
-</span>
+menu.onclick = function () {
 
+    nav.classList.toggle("show");
 
-</div>
-
-
-`;
-
-
-});
-
-
-document.getElementById("projectsBox").innerHTML=projects;
-
-
-
-
-
-
-
-let education="";
-
-
-data.education.forEach(item=>{
-
-
-education += `
-
-
-<div class="timeline">
-
-<h3>
-${item.year}
-</h3>
-
-<h4>
-${item.school}
-</h4>
-
-<h5>
-${item.title}
-</h5>
-
-<p>
-${item.description}
-</p>
-
-
-</div>
-
-
-
-`;
-
-
-});
-
-
-document.getElementById("educationBox").innerHTML=education;
-
-
-
-})
-
-.catch(error=>{
-
-console.log(error);
-
-});
-
-
-const menu =
-document.getElementById("menu");
-
-
-const nav =
-document.getElementById("nav");
-
-
-
-menu.onclick=function(){
-
-nav.classList.toggle("show");
-
-}
+};
